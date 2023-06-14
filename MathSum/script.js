@@ -3,7 +3,7 @@ function generateProblem(problemElement) {
 
     // Generate the operator
     operator = Math.random() < 0.5 ? '+' : '-';
-    
+
     // Generate the numbers based on the operator
     if (operator === '+') {
         num1 = Math.floor(Math.random() * 901) + 100;
@@ -11,6 +11,9 @@ function generateProblem(problemElement) {
     } else {
         num1 = Math.floor(Math.random() * 901) + 100;
         num2 = Math.floor(Math.random() * (num1 - 100)) + 100; // Ensure num2 is less than num1
+        if (num1 % 100 < num2 % 100) {
+            num1 -= num1 % 100; // Adjust num1 to avoid carry forward
+        }
     }
 
     problemElement.getElementsByClassName('num1')[0].textContent = num1;
@@ -20,6 +23,8 @@ function generateProblem(problemElement) {
     problemElement.getElementsByClassName('result')[0].textContent = '';
     problemElement.getElementsByClassName('result')[0].className = 'result';
 }
+
+
 
 function checkAnswers() {
     var problems = document.getElementsByClassName('problem');
