@@ -54,7 +54,7 @@ function checkAnswers() {
 
 function showScore() {
     var scoreElement = document.getElementById('score');
-    scoreElement.textContent = 'Score: ' + score + '/' + problems.length;
+    scoreElement.textContent = 'Score: ' + score*25 + '/' + problems.length*25;
     scoreElement.style.display = 'block';
 }
 
