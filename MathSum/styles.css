@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.problem-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.problem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 34px; 
+}
+
+.result {
+    margin-top: 10px;
+    font-size: 38px; /* Increase the font size here */
+}
+
+.result.correct {
+    color: green;
+}
+
+.result.incorrect {
+    color: red;
+}
