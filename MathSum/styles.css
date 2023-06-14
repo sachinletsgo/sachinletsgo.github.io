@@ -5,30 +5,31 @@ body {
 header {
     background-color: #f0f0f0;
     padding: 20px;
+    text-align: center;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 20px;
 }
 
 .problem-row {
     display: flex;
+    flex-direction: column;
     gap: 20px;
     margin-bottom: 20px;
 }
 
 .problem {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 10px;
-    font-size: 34px; 
+    font-size: 24px;
 }
 
 .result {
     margin-top: 10px;
-    font-size: 38px; /* Increase the font size here */
+    font-size: 18px;
 }
 
 .result.correct {
@@ -37,4 +38,9 @@ main {
 
 .result.incorrect {
     color: red;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
 }
