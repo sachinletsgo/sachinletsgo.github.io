@@ -27,6 +27,8 @@ function generateProblem(problemElement) {
 
 
 function checkAnswers() {
+
+    score = 0;
     var problems = document.getElementsByClassName('problem');
 
     for (var i = 0; i < problems.length; i++) {
@@ -41,12 +43,23 @@ function checkAnswers() {
         if (answer === correctAnswer) {
             result.textContent = 'Correct!';
             result.className = 'result correct';
+            score++;
         } else {
             result.textContent = 'Incorrect!';
             result.className = 'result incorrect';
         }
     }
+    showScore();
 }
+
+function showScore() {
+    var scoreElement = document.getElementById('score');
+    scoreElement.textContent = 'Score: ' + score + '/' + problems.length;
+    scoreElement.style.display = 'block';
+}
+
+
+var score = 0;
 
 document.getElementById('checkButton').addEventListener('click', checkAnswers);
 
